@@ -22,20 +22,12 @@ import freemarker.template.TemplateNotFoundException;
 /**
  * PDF生成工具类
  *
- * @author Goofy <a href="http://www.xdemo.org">http://www.xdemo.org</a>
+ * @author xuemenghao
  */
 public class PdfUtils {
 
     public static void main(String[] args) {
         try {
-//            HashMap<Object, Object> o = new HashMap<Object, Object>();
-            //存入一个集合
-//            List<String> list = new ArrayList<String>();
-//            list.add("小明");
-//            list.add("张三");
-//            list.add("李四");
-//            o.put("name", "http://www.xdemo.org/");
-//            o.put("nameList", list);
             ArrayList<Person> people = new ArrayList<>();
             for (int i = 0; i <= 10; i++) {
                 Person person = new Person();
@@ -50,7 +42,7 @@ public class PdfUtils {
 
             String path = "src\\main\\resources\\templates";
 
-            generateToFile(path, "template.ftl", path + "pdf/", map, "D:\\xdemo.pdf");
+            generateToFile(path, "template.ftl", path + "pdf/", map, "D:\\demo.pdf");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -116,7 +108,6 @@ public class PdfUtils {
         render.layout();
         render.createPDF(out);
         render.finishPDF();
-        render = null;
         return out;
     }
 }

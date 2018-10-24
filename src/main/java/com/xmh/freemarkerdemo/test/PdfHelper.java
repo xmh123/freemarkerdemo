@@ -20,7 +20,7 @@ import freemarker.template.TemplateNotFoundException;
 /**
  * PDF生成辅助类
  *
- * @author Goofy <a href="http://www.xdemo.org">http://www.xdemo.org</a>
+ * @author xuemenghao
  */
 @SuppressWarnings("deprecation")
 public class PdfHelper {
@@ -33,7 +33,6 @@ public class PdfHelper {
         //添加字体，以支持中文
         render.getFontResolver().addFont("src\\main\\resources\\templates\\pdf\\font\\simsun.ttf", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
         render.getFontResolver().addFont("src\\main\\resources\\templates\\pdf\\font\\simsun.ttc", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
-//        render.getFontResolver().addFont("src\\main\\resources\\templates\\pdf\\font\\STXINWEI.TTF", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
 
         return render;
     }
