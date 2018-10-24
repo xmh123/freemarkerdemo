@@ -28,16 +28,25 @@ public class PdfUtils {
 
     public static void main(String[] args) {
         try {
-            HashMap map = new HashMap();
-            List<Person> people = new ArrayList<>();
+//            HashMap<Object, Object> o = new HashMap<Object, Object>();
+            //存入一个集合
+//            List<String> list = new ArrayList<String>();
+//            list.add("小明");
+//            list.add("张三");
+//            list.add("李四");
+//            o.put("name", "http://www.xdemo.org/");
+//            o.put("nameList", list);
+            ArrayList<Person> people = new ArrayList<>();
             for (int i = 0; i <= 10; i++) {
                 Person person = new Person();
-                person.setName("name" + i);
-                person.setAge(i + 1);
                 person.setId(i);
+                person.setName("Person" + i);
+                person.setAge(i + 10);
                 people.add(person);
             }
+            HashMap<String, List<Person>> map = new HashMap<>();
             map.put("people", people);
+
 
             String path = "src\\main\\resources\\templates";
 

@@ -31,8 +31,9 @@ public class PdfHelper {
 
         String path = getPath();
         //添加字体，以支持中文
-        render.getFontResolver().addFont("src\\main\\resources\\templates\\pdf\\font\\simhei.ttf", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+        render.getFontResolver().addFont("src\\main\\resources\\templates\\pdf\\font\\simsun.ttf", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
         render.getFontResolver().addFont("src\\main\\resources\\templates\\pdf\\font\\simsun.ttc", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+//        render.getFontResolver().addFont("src\\main\\resources\\templates\\pdf\\font\\STXINWEI.TTF", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
 
         return render;
     }
